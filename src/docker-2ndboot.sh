@@ -25,7 +25,8 @@ until [ -e /tmp/.X11-unix/X0 ]; do sleep 1; done
 : FIXME: remove this sleep
 sleep 1
 # x11vnc -usepw &
-x11vnc -repeat -forever -display :1 -xkb -rfbauth /home/user/.vnc/passwdfile &
+# simply use a passwd
+x11vnc -repeat -forever -display :0 -xkb -passwd anboxvnc &
 : FIXME: remove this sleep
 sleep 1
 fvwm &

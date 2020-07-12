@@ -159,3 +159,6 @@ aind is expected to be used in conjunction with encryption of the client device,
   * F-Droid (`/apk-pre.d/FDroid.apk`): [the GNU General Public License, Version 3](https://gitlab.com/fdroid/fdroidclient/-/blob/master/LICENSE)
   * Android image (`/android.img`, fetched from https://build.anbox.io/): see https://source.android.com/setup/start/licenses . For build instruction, see https://github.com/anbox/anbox/blob/master/docs/build-android.md
   * For other packages, see `/usr/share/doc/*/copyright` .
+
+## self usage
+docker run -td --name aind --privileged -p 5900:5900 -v /lib/modules:/lib/modules:ro -v /home/pve/Android_docker/apk/:/apk.d/ lekai63/aind
